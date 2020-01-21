@@ -16,7 +16,16 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  if(reverse(word).equals(word)){
+  int a=word.length()-1;
+  String wordz="";
+  for(int i=0;i<=a;i++){
+    if(word.substring(i,i+1).equals(" ")&&Character.isLetter(word.charAt(i))){
+    }
+    else{
+      wordz+=word.substring(i,i+1).toLowerCase();
+    }
+  }
+  if(reverse(word).equals(wordz)){
     return true;
   }
   else{
